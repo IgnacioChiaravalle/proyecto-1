@@ -12,10 +12,8 @@ function setActiveDD(selectionDD) {
 	activeDD = selectionDD;
 }
 
-
 function setBackground(bgURL) {
 	document.body.style.backgroundImage = "url('" + bgURL + "')";
-	
 }
 
 
@@ -31,9 +29,8 @@ function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document.
 		for (var j = 0; j < sideLength; j++) {
 			var td = document.createElement('td');
 			td.classList.add("covered-cell");
-			td.style.width = '' + (screen.width * 0.65 / sideLength) + '';
-			td.style.height = '' + (screen.height * 0.65 / sideLength) + '';
-			//td.appendChild(document.createTextNode('holad jcewefecnefncwenfejernfrrjfnvcwirefvnifn')); //¿¿¿PONER ACÁ LA IMAGEN CORRESPONDIENTE???
+			td.style.width = '' + (screen.width * 0.65 / sideLength) + 'px';
+			td.style.height = '' + (screen.height * 0.65 / sideLength) + 'px';
 			tr.appendChild(td);
 		}
 

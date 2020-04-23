@@ -64,10 +64,15 @@
 			padding: 8px;
 		}
 
+html{
+    height: 100%;
+	width: 100%;
+	margin:0;
+}
 
 body { /* Background should be fixed at all times. */
-	background-repeat:no-repeat;
-    background-size:100% 100%;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 table {
@@ -85,8 +90,7 @@ table td {
 .covered-cell {
 	background-image: url("Cards/Card Backside.png");
 	background-repeat: no-repeat;
-  	background-size: auto;
-  	background-size:100% 100%;
+  	background-size: 100% 100%;
   	border-radius: 10px;
   	opacity: 0.875;
 }
