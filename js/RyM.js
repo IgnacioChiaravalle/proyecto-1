@@ -30,6 +30,7 @@ function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document,
 		for (var j = 0; j < sideLength; j++) {
 			var td = document.createElement('td');
 			td.classList.add("covered-cell");
+			td.id = i + " " + j;
 			td.style.width = '' + (screen.width * 0.65 / sideLength) + 'px';
 			td.style.height = '' + (screen.height * 0.65 / sideLength) + 'px';
 			tr.appendChild(td);
@@ -40,6 +41,8 @@ function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document,
 	gameGrid.appendChild(gridBody);
 	if (gameGrid.childElementCount > 1)
 		gameGrid.removeChild(gameGrid.firstChild);
+
+	storeTDs();
 }
 
 	function defineMatrix(sideLength, bombsNum) { //Creates a Matrix for handling the Grid.
@@ -54,20 +57,20 @@ function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document,
 		imageNames = imageNames.slice(0, (sideLength * sideLength - bombsNum)/ 2); //The array has been randomly shuffled and turned into a subset of itself that contains only the amount of image names needed.
 
 		for (var i = 0; i < bombsNum; i++) { //First cells of matrix are filled with bombs.
-			matrixOfImageRoutes[0][i] = "Neutrino Bomb.png";
+			matrixOfImageRoutes[0][i] = "Hidden Images/Neutrino Bomb.png";
 		}
 		var pos = 0;
 		for (var i = 0; i < sideLength; i++) { //The rest matrix is filled with two copies of every image selected after slicing the array.
 			for (var j = 0; j < sideLength; j++) {
 				if (i == 0 && j < bombsNum) j = bombsNum - 1;
 				else {
-					matrixOfImageRoutes[i][j] = "Image " + imageNames[pos] + ".png";
+					matrixOfImageRoutes[i][j] = "Hidden Images/Image " + imageNames[pos] + ".png";
 					if ((i%2==0 && j%2==0) || (i%2==1 && j%2==1)) pos++; //pos is modified on these two conditions because bombsNum and sideLength are odd numbers and that determines when pos should be updated.
 				}
 			}
 		}
 
-		var string = "";
+		/*var string = "";
 		for (var i = 0; i < sideLength; i++) {
 			for (var j = 0; j < sideLength; j++) {
 				if (j == 0) string += "[ ";
@@ -75,7 +78,7 @@ function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document,
 				if (j == sideLength - 1) string += " ]\n";
 			}
 		}
-		console.log(string);
+		console.log(string);*/
 
 		for (var i = 0; i < sideLength; i++) { //The matrix is randomly shuffled.
 			for (var j = 0; j < sideLength; j++) {
@@ -86,7 +89,7 @@ function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document,
 				matrixOfImageRoutes[i1][j1] = temp;
 			}
 		}
-		var string = "";
+		/*var string = "";
 		for (var i = 0; i < sideLength; i++) {
 			for (var j = 0; j < sideLength; j++) {
 				if (j == 0) string += "[ ";
@@ -94,7 +97,7 @@ function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document,
 				if (j == sideLength - 1) string += " ]\n";
 			}
 		}
-		console.log(string);
+		console.log(string);*/
 
 		/*PARA CADA CELDA DE LA MATRIZ SELECCIONAR UN ELEMENTO DE LA CARPETA "Hidden Images".
 		* Se me ocurre hacer un arreglo con tantos nombres de imágenes como sean necesarios [(sideLength^2 - bombsNum) / 2],
@@ -127,6 +130,42 @@ function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document,
 		*/
 
 	}
+
+	function storeTDs() {
+		var table = document.getElementById("gameGrid");
+		var rows = table.getElementsByTagName("tr");
+		for (i = 0; i < rows.length; i++) {
+			row = rows[i];
+			for (j = 0; j < rows.length; j++) {
+				//console.log("llega " + j);
+				row.getElementsByTagName("td")[j].onclick = function() {
+					var id = this.id.toString();
+					posI = parseInt(id.substr(0, id.indexOf(' ')), 10);
+					posJ = parseInt(id.substr(id.indexOf(' ' + 1), id.length), 10);
+					onClickCell(this, posI, posJ);
+				};
+			}
+		}
+	}
+
+
+
+
+function onClickCell(cell, posI, posJ) {
+	console.log(matrixOfImageRoutes[posI][posJ]);
+	cell.classList.remove("covered-cell");
+	cell.classList.add("uncovered-cell");
+	cell.style.backgroundImage = "url('" + matrixOfImageRoutes[posI][posJ] + "')";
+
+}
+
+
+
+
+
+
+
+
 
 /* DE ACÁ EN ADELANTE TENGO CÓDIGO DE UNA PRUEBA QUE ESTUVE HACIENDO QUE TAL VEZ ME SIRVA MÁS ADELANTE EN EL DESARROLLO, PERO ES EN PRINCIPIO INÚTIL.
 
