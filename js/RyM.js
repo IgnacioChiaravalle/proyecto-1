@@ -1,6 +1,8 @@
+const imageQuantity = 57;
+
 var activeDD; //Active Drop-Down-Menu Item (i.e., the difficulty).
 var gameGrid;
-var matrix;
+var matrixOfImageRoutes;
 
 function setDefaultActiveDD(defaultDD) {
 	activeDD = document.getElementById(defaultDD);
@@ -17,9 +19,8 @@ function setBackground(bgURL) {
 }
 
 
-//GUARDAR PARA CADA CELDA SU CONTENIDO EN UNA MATRIZ AUXILIAR. AHÍ PUEDO DEFINIR QUÉ PASA CON LAS BOMBAS Y TODO ESO.
-function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document.
-	//defineMatrix(sideLength, bombsNum); ESTA FUNCIÓN VA A SER NECESARIA PARA SETEAR LAS IMÁGENES. COMENTO LA LLAMADA HASTA QUE ESTÉ COMPLETA.
+function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document, which works basically as a GUI for the matrixOfImageRoutes.
+	defineMatrix(sideLength, bombsNum);
 	gameGrid = document.getElementById('gameGrid');
 	var gridBody = document.createElement('tbody');
 
@@ -42,9 +43,58 @@ function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document.
 }
 
 	function defineMatrix(sideLength, bombsNum) { //Creates a Matrix for handling the Grid.
-		matrix = [];
+		matrixOfImageRoutes = [];
 		for(var i = 0; i < sideLength; i++)
-			matrix[i] = new Array(sideLength);
+			matrixOfImageRoutes[i] = new Array(sideLength);
+
+		var imageNames = new Array(imageQuantity); //Array that contains an Integer for every possible hidden image.
+		for (var i = 0; i < 57; i++)
+			imageNames[i] = i;
+		imageNames.sort(() => Math.random() - 0.5);
+		imageNames = imageNames.slice(0, (sideLength * sideLength - bombsNum)/ 2); //The array has been randomly shuffled and turned into a subset of itself that contains only the amount of image names needed.
+
+		for (var i = 0; i < bombsNum; i++) { //First cells of matrix are filled with bombs.
+			matrixOfImageRoutes[0][i] = "Neutrino Bomb.png";
+		}
+		var pos = 0;
+		for (var i = 0; i < sideLength; i++) { //The rest matrix is filled with two copies of every image selected after slicing the array.
+			for (var j = 0; j < sideLength; j++) {
+				if (i == 0 && j < bombsNum) j = bombsNum - 1;
+				else {
+					matrixOfImageRoutes[i][j] = "Image " + imageNames[pos] + ".png";
+					if ((i%2==0 && j%2==0) || (i%2==1 && j%2==1)) pos++; //pos is modified on these two conditions because bombsNum and sideLength are odd numbers and that determines when pos should be updated.
+				}
+			}
+		}
+
+		var string = "";
+		for (var i = 0; i < sideLength; i++) {
+			for (var j = 0; j < sideLength; j++) {
+				if (j == 0) string += "[ ";
+				string += matrixOfImageRoutes[i][j] + ", ";
+				if (j == sideLength - 1) string += " ]\n";
+			}
+		}
+		console.log(string);
+
+		for (var i = 0; i < sideLength; i++) { //The matrix is randomly shuffled.
+			for (var j = 0; j < sideLength; j++) {
+				var i1 = Math.floor(Math.random() * sideLength);
+				var j1 = Math.floor(Math.random() * sideLength);
+				var temp = matrixOfImageRoutes[i][j];
+				matrixOfImageRoutes[i][j] = matrixOfImageRoutes[i1][j1];
+				matrixOfImageRoutes[i1][j1] = temp;
+			}
+		}
+		var string = "";
+		for (var i = 0; i < sideLength; i++) {
+			for (var j = 0; j < sideLength; j++) {
+				if (j == 0) string += "[ ";
+				string += matrixOfImageRoutes[i][j] + ", ";
+				if (j == sideLength - 1) string += " ]\n";
+			}
+		}
+		console.log(string);
 
 		/*PARA CADA CELDA DE LA MATRIZ SELECCIONAR UN ELEMENTO DE LA CARPETA "Hidden Images".
 		* Se me ocurre hacer un arreglo con tantos nombres de imágenes como sean necesarios [(sideLength^2 - bombsNum) / 2],
@@ -78,7 +128,9 @@ function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document.
 
 	}
 
-/*var contenidos = new Array();
+/* DE ACÁ EN ADELANTE TENGO CÓDIGO DE UNA PRUEBA QUE ESTUVE HACIENDO QUE TAL VEZ ME SIRVA MÁS ADELANTE EN EL DESARROLLO, PERO ES EN PRINCIPIO INÚTIL.
+
+var contenidos = new Array();
 contenidos[0] = "3ntr3t3n1m13nt0";
 contenidos[1] = "QUARANTINE ALERT";
 contenidos[2] = "Asereje";

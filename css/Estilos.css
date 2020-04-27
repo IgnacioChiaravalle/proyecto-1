@@ -27,8 +27,9 @@
 		font-family: Misfits;
 		
 	}
-	.drop-down-menu:hover button { /* Change menu's button color on hover. */  /*CAMBIAR COLORES*/
+	.drop-down-menu:hover button { /* Change menu's button color on hover. */
 		background-color: #b7e4f9ff;
+		cursor: pointer;
 	}
 
 	.drop-down-content { /* Menu's content is hidden by default. */
@@ -43,6 +44,7 @@
 		color: #82491eff;
 		border: 0px;
 		border-radius: 10px;
+		cursor: pointer;
 	}
 
 		.drop-down-content a {
@@ -68,6 +70,7 @@ html{
     height: 100%;
 	width: 100%;
 	margin:0;
+	cursor: auto;
 }
 
 body { /* Background should be fixed at all times. */
@@ -97,6 +100,7 @@ table td {
 .covered-cell:hover {
 	background-image: url("Cards/Hover Highlight.png");
 	opacity: 1;
+	cursor: pointer;
 }
 
 /*table tr:first-child td {
@@ -115,7 +119,9 @@ table tr td:last-child {
 
 
 
-/*h1 {
+/* DE ACÁ EN ADELANTE TENGO CÓDIGO DE UNA PRUEBA QUE ESTUVE HACIENDO QUE TAL VEZ ME SIRVA MÁS ADELANTE EN EL DESARROLLO, PERO ES EN PRINCIPIO INÚTIL.
+
+h1 {
 	color: darkred;
 	text-align: left;
 	text-shadow: absolute;
