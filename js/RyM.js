@@ -3,6 +3,7 @@ const imageQuantity = 57;
 var activeDD; //Active Drop-Down-Menu Item (i.e., the difficulty).
 var gameGrid;
 var matrixOfImageRoutes;
+//var currentlyRevealedImages; //Array that contains the grid-cells that are currently revealed, so that they can be easily concealed or made to remain the way they are.
 
 function setDefaultActiveDD(defaultDD) {
 	activeDD = document.getElementById(defaultDD);
@@ -137,7 +138,6 @@ function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document,
 		for (i = 0; i < rows.length; i++) {
 			row = rows[i];
 			for (j = 0; j < rows.length; j++) {
-				//console.log("llega " + j);
 				row.getElementsByTagName("td")[j].onclick = function() {
 					var id = this.id.toString();
 					posI = parseInt(id.substr(0, id.indexOf(' ')), 10);
@@ -152,11 +152,9 @@ function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document,
 
 
 function onClickCell(cell, posI, posJ) {
-	console.log(matrixOfImageRoutes[posI][posJ]);
 	cell.classList.remove("covered-cell");
 	cell.classList.add("uncovered-cell");
 	cell.style.backgroundImage = "url('" + matrixOfImageRoutes[posI][posJ] + "')";
-
 }
 
 
