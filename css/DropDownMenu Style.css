@@ -1,0 +1,86 @@
+@font-face {
+	font-family: "Misfits";
+	src: url("MISFITS_Font.ttf");
+}
+
+
+.drop-down-menu {
+	/* Size */
+	width: 200px;
+	margin-top: 10px;
+	margin-left: 10px;
+	
+	/* Position */
+	position: absolute;
+
+	/* Text */
+	text-align: center;
+	font-style: italic;
+	font-size: 20px;
+	font-family: Misfits;
+}
+
+	.drop-down-menu button {
+		/* Size */
+		width: 200px;
+		border-radius: 10px;
+		padding: 8px;
+		vertical-align: middle;
+
+		/* Background */
+		background-color: #fae49bff;
+		
+		/* Text */
+		color: #82491eff;
+		text-align: center;
+		font-style: italic;
+		font-size: 20px;
+		font-family: Misfits;
+		
+	}
+	.drop-down-menu:hover button { /* Change menu's button color on hover. */
+		background-color: #b7e4f9ff;
+		cursor: pointer;
+	}
+
+	.drop-down-content { /* Menu's content is hidden by default. */
+		display: none;
+	}
+	.drop-down-menu:hover .drop-down-content { /* Show menu's content on hover. */
+		/* Display */
+		display: block;
+
+		/* Size */
+		width: 200px;
+		margin-left: 11px;
+		border: 0px;
+		border-radius: 10px;
+		
+		/* Background */
+		background-color: #fae49bff;
+		
+		/* Text */
+		color: #82491eff;
+		
+		/* Cursor */
+		cursor: pointer;
+	}
+
+		.drop-down-content a {
+			display: block; /* Make the links appear below each other */
+			padding: 2px;
+			border-radius: 10px;
+			text-decoration: none; /* Remove underline from links */
+		}
+		.drop-down-content a:hover { /* Links change their looks on hover. */
+			background-color: #e89242ff;
+			color: black;
+			font-style: normal;
+			padding: 8px;
+		}
+		.drop-down-content a.active { /* Active link looks different from rest, but keeps on-hover padding and font-style. */
+			background-color: #24325fff;
+			color: white;
+			font-style: normal;
+			padding: 8px;
+		}

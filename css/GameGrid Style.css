@@ -1,0 +1,36 @@
+table {
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	border-collapse: separate;
+	border-spacing: 2px;
+}
+
+table tr {
+	border: 2px;
+	border-radius: 10px;
+}
+
+table td {
+	border: 2px;
+	border-radius: 10px;
+}
+td.covered-cell {
+	background-image: url("Cards/Card Backside.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border-radius: 10px;
+	opacity: 0.875;
+}
+td.covered-cell:hover {
+	background-image: url("Cards/Hover Highlight.png");
+	opacity: 1;
+	cursor: pointer;
+}
+
+td.uncovered-cell {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border-radius: 10px;
+	opacity: 1;
+}

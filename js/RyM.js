@@ -3,7 +3,7 @@ const imageQuantity = 57;
 var activeDD; //Active Drop-Down-Menu Item (i.e., the difficulty).
 var gameGrid;
 var matrixOfImageRoutes;
-//var currentlyRevealedImages; //Array that contains the grid-cells that are currently revealed, so that they can be easily concealed or made to remain the way they are.
+var currentlyRevealedImages; //Array that contains the grid-cells that are currently revealed, so that they can be easily concealed or made to remain the way they are.
 
 function setDefaultActiveDD(defaultDD) {
 	activeDD = document.getElementById(defaultDD);
@@ -43,6 +43,7 @@ function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document,
 	if (gameGrid.childElementCount > 1)
 		gameGrid.removeChild(gameGrid.firstChild);
 
+	currentlyRevealedImages = [];
 	storeTDs();
 }
 
@@ -155,7 +156,19 @@ function onClickCell(cell, posI, posJ) {
 	cell.classList.remove("covered-cell");
 	cell.classList.add("uncovered-cell");
 	cell.style.backgroundImage = "url('" + matrixOfImageRoutes[posI][posJ] + "')";
+	manageArray(cell);
 }
+	function manageArray(cell) {
+		if (currentlyRevealedImages.length == 2) {
+			currentlyRevealedImages[0].classList.remove("uncovered-cell");
+			currentlyRevealedImages[0].classList.add("covered-cell");
+			currentlyRevealedImages[1].classList.remove("uncovered-cell");
+			currentlyRevealedImages[1].classList.add("covered-cell");
+			currentlyRevealedImages.pop();
+			currentlyRevealedImages.pop();
+		}
+		currentlyRevealedImages.push(cell);
+	}
 
 
 
