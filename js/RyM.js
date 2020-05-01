@@ -10,8 +10,8 @@ function setDefaultActiveDD(defaultDD) {
 }
 
 function setActiveDD(selectionDD) {
-	activeDD.classList.remove("active");
-	selectionDD.classList.add("active");
+	activeDD.classList.remove("activeDD");
+	selectionDD.classList.add("activeDD");
 	activeDD = selectionDD;
 }
 

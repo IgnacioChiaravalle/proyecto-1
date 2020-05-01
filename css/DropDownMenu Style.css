@@ -70,7 +70,6 @@
 			display: block; /* Make the links appear below each other */
 			padding: 2px;
 			border-radius: 10px;
-			text-decoration: none; /* Remove underline from links */
 		}
 		.drop-down-content a:hover { /* Links change their looks on hover. */
 			background-color: #e89242ff;
@@ -78,7 +77,7 @@
 			font-style: normal;
 			padding: 8px;
 		}
-		.drop-down-content a.active { /* Active link looks different from rest, but keeps on-hover padding and font-style. */
+		.drop-down-content a.activeDD { /* Active link looks different from rest, but keeps on-hover padding and font-style. */
 			background-color: #24325fff;
 			color: white;
 			font-style: normal;

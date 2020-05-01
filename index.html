@@ -1,7 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>Rick and Morty's Matcher</title>
+		<title>Rick and Morty's Matcher - Juego</title>
 		<script src = "js/RyM.js" type = "text/javascript"></script>
 		<link rel = "stylesheet" type = "text/css" href = "css/Document Style.css"/>
 		<link rel = "stylesheet" type = "text/css" href = "css/NavBar Style.css"/>
@@ -17,9 +17,9 @@
 			<div>
 				<a class = "navbar-gamename">Rick and Morty's Matcher</a>
 				<div class = "navbar-options">
-					<a class="nav-link">Game</a>
-					<a class="nav-link">About</a>
-					<a class="nav-link">Contact</a>
+					<a class="navbar-link" id = "activeNavBar">Juego</a> <!-- Current screen -->
+					<a class="navbar-link" href = "help.html">Instrucciones</a> <!-- Takes player to Help screen. -->
+					<a class="navbar-link" href = "contact.html">Contacto</a> <!-- Takes player to Contact screen. -->
 				</div>
 			</div>
 		</nav>
@@ -31,7 +31,7 @@
 			<button>Seleccione la Dificultad</button>
 			<div class = "drop-down-content">
 				<a  id = "defaultDD"
-					class= "active"
+					class= "activeDD"
 					onclick = "setActiveDD(this); setBackground('Backgrounds/Jerry/Jerry - Background.png'); createGrid(5, 1)">
 					<img src="Characters/Small Jerry.ico">
 					Jerry (5 x 5)
