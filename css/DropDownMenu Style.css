@@ -6,7 +6,7 @@
 
 .drop-down-menu {
 	/* Size */
-	width: 200px;
+	width: 13%;
 	margin-top: 10px;
 	margin-left: 10px;
 	
@@ -16,13 +16,12 @@
 	/* Text */
 	text-align: center;
 	font-style: italic;
-	font-size: 20px;
+	font-size: 115%;
 	font-family: Misfits;
 }
 
 	.drop-down-menu button {
 		/* Size */
-		width: 200px;
 		border-radius: 10px;
 		padding: 8px;
 		vertical-align: middle;
@@ -34,11 +33,11 @@
 		color: #82491eff;
 		text-align: center;
 		font-style: italic;
-		font-size: 20px;
+		font-size: 112%;
 		font-family: Misfits;
 		
 	}
-	.drop-down-menu:hover button { /* Change menu's button color on hover. */
+	.drop-down-menu:hover button {
 		background-color: #b7e4f9ff;
 		cursor: pointer;
 	}
@@ -51,7 +50,6 @@
 		display: block;
 
 		/* Size */
-		width: 200px;
 		margin-left: 11px;
 		border: 0px;
 		border-radius: 10px;
@@ -67,11 +65,11 @@
 	}
 
 		.drop-down-content a {
-			display: block; /* Make the links appear below each other */
+			display: block;
 			padding: 2px;
 			border-radius: 10px;
 		}
-		.drop-down-content a:hover { /* Links change their looks on hover. */
+		.drop-down-content a:hover {
 			background-color: #e89242ff;
 			color: black;
 			font-style: normal;

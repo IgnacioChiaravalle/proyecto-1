@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Rick and Morty's Matcher - Juego</title>
-		<script src = "js/RyM.js" type = "text/javascript"></script>
+		<title>Juego - Rick and Morty's Matcher</title>
+		<script src = "js/SavesHandler.js" type = "text/javascript"></script>
+		<script src = "js/GridCreator.js" type = "text/javascript"></script>
 		<link rel = "stylesheet" type = "text/css" href = "css/Document Style.css"/>
 		<link rel = "stylesheet" type = "text/css" href = "css/NavBar Style.css"/>
 		<link rel = "stylesheet" type = "text/css" href = "css/DropDownMenu Style.css"/>
@@ -10,7 +11,7 @@
 		<link rel="shortcut icon" href="favicon-for-site.ico" />
 	</head>
 
-	<body id = "body">
+	<body>
 
 
 		<nav>
@@ -18,118 +19,53 @@
 				<a class = "navbar-gamename">Rick and Morty's Matcher</a>
 				<div class = "navbar-options">
 					<a class="navbar-link" id = "activeNavBar">Juego</a> <!-- Current screen -->
-					<a class="navbar-link" href = "help.html">Instrucciones</a> <!-- Takes player to Help screen. -->
+					<a class="navbar-link" href = "help.html">Ayuda</a> <!-- Takes player to Help screen. -->
 					<a class="navbar-link" href = "contact.html">Contacto</a> <!-- Takes player to Contact screen. -->
 				</div>
 			</div>
 		</nav>
 
 
-
-
 		<div class = "drop-down-menu">
 			<button>Seleccione la Dificultad</button>
 			<div class = "drop-down-content">
-				<a  id = "defaultDD"
-					class= "activeDD"
-					onclick = "setActiveDD(this); setBackground('Backgrounds/Jerry/Jerry - Background.png'); createGrid(5, 1)">
+				<a  id = "JerryDD"
+					onclick = "setDifficulty(this, 'Backgrounds/Jerry/Jerry - Background.png'); createGrid(5, 1)">
 					<img src="Characters/Small Jerry.ico">
 					Jerry (5 x 5)
 					<img src="Characters/Small Jerry Flipped.ico">
 				</a>
-				<a  onclick = "setActiveDD(this); setBackground('Backgrounds/Summer/Summer - Background.png'); createGrid(7, 3)">
+				<a  id = "SummerDD"
+					onclick = "setDifficulty(this, 'Backgrounds/Summer/Summer - Background.png'); createGrid(7, 3)">
 					<img src="Characters/Small Summer.ico">
 					Summer (7 x 7)
 					<img src="Characters/Small Summer Flipped.ico">
 				</a>
-				<a  onclick = "setActiveDD(this); setBackground('Backgrounds/Morty/Morty - Background.png'); createGrid(9, 5)">
+				<a  id = "MortyDD"
+					onclick = "setDifficulty(this, 'Backgrounds/Morty/Morty - Background.png'); createGrid(9, 5)">
 					<img src="Characters/Small Morty.ico">
 					Morty (9 x 9)
 					<img src="Characters/Small Morty.ico">
 				</a>
-				<a  onclick = "setActiveDD(this); setBackground('Backgrounds/Rick/Rick - Background.png'); createGrid(11, 7)">
+				<a  id = "RickDD"
+					onclick = "setDifficulty(this, 'Backgrounds/Rick/Rick - Background.png'); createGrid(11, 7)">
 					<img src="Characters/Small Rick.ico">
 					Rick (11 x 11)
 					<img src="Characters/Small Rick Flipped.ico">
 				</a>
-
-				<script type="text/javascript">
-					setDefaultActiveDD("defaultDD");
-					setBackground('Backgrounds/Jerry/Jerry - Background.png');
-				</script> <!-- This script should not be here in final version -->
-
 			</div>
 		</div>
 
-		<!-- Place a timer under the drop down menu that starts when a cell is clicked. -->
-		<p id = "timer"></p>
+
 		<table id = "gameGrid" class = "table"></table>
+
 		
+		<script type = "text/javascript">
+			clearStorage(); //This is for testing purposes only. It clears the localStorage so that the user is shown what they would see for the first time.
+			retrieveStorage();
+		</script>
+
+
 	</body>
 
 </html>
-
-
-
-<!--
-DE ACÁ EN ADELANTE TENGO CÓDIGO DE UNA PRUEBA QUE ESTUVE HACIENDO QUE TAL VEZ ME SIRVA MÁS ADELANTE EN EL DESARROLLO, PERO ES EN PRINCIPIO INÚTIL.
-
-<h1 id = "hola" onMouseOver = "fontChange()" onMouseOut = "undo()">Hola, Mundo!!</h1>
-<h2>Estoy probando HTML, CSS y JS...</h2>
-<image class = "imagen" id = "imagenDesaparece" onMouseOver = "noEstoy()" onMouseOut="siEstoy()"></image>
-<p class = "parrafo">Piola, no?</p>
-
-
-<table border = 1>
-<tr><th class = "celdaTabla">hola</th><th class = "celdaTabla">que</th><th class = "celdaTabla">tal</th></tr>
-<tbody>
-<tr>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-</tr>
-
-<tr>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-</tr>
-
-<tr>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-</tr>
-
-<tr>
-<td onMouseOver = "funcionTabla(this)">lo</td>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-</tr>
-
-<tr>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-</tr>
-
-<tr>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-</tr>
-
-<tr>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-</tr>
-
-<tr>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-<td onMouseOver = "funcionTabla(this)"></td>
-</tr>
-
-</tbody>
-</table>-->

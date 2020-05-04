@@ -16,14 +16,14 @@ table td {
 	border-radius: 10px;
 }
 td.covered-cell {
-	background-image: url("Cards/Card Backside.png");
+	background-image: url("Cards/Card Backside.png")!important;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	border-radius: 10px;
 	opacity: 0.875;
 }
 td.covered-cell:hover {
-	background-image: url("Cards/Hover Highlight.png");
+	background-image: url("Cards/Hover Highlight.png")!important;
 	opacity: 1;
 	cursor: pointer;
 }
