@@ -194,5 +194,25 @@ function endGame(win) {
 			}
 		} //All images are revealed.
 
+		setResultsCount(win);
+
 	}, 2000);
+}
+
+function setResultsCount(win) {
+	var selectionDD = document.getElementsByClassName("activeDD");
+	var difficulty = selectionDD[0].id;
+	difficulty = difficulty.substr(0, difficulty.indexOf('D'));
+	var winsCount = localStorage.getItem(difficulty + " Wins");
+	var lossesCount = localStorage.getItem(difficulty + " Losses");
+	if (win) {
+		winsCount++;
+		localStorage.setItem(difficulty + " Wins", winsCount)
+	}
+	else {
+		lossesCount++;
+		localStorage.setItem(difficulty + " Losses", lossesCount);
+	}
+	console.log("Victorias en esta dificultad: " + winsCount + "\nDerrotas en esta dificultad: " + lossesCount);
+
 }

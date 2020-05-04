@@ -6,8 +6,13 @@ function retrieveStorage() {
 		var selectionDD = document.getElementById(idDD);
 		selectionDD.onclick.apply(selectionDD);
 	}
-	else
+	else {
+		localStorage.setItem("Jerry Wins", 0); localStorage.setItem("Jerry Losses", 0);
+		localStorage.setItem("Summer Wins", 0); localStorage.setItem("Summer Losses", 0);
+		localStorage.setItem("Morty Wins", 0); localStorage.setItem("Morty Losses", 0);
+		localStorage.setItem("Rick Wins", 0); localStorage.setItem("Rick Losses", 0);
 		setBackground("Backgrounds/Rick and Morty Portal.png");
+	}
 }
 
 function setDifficulty(selectionDD, bgURL) {
