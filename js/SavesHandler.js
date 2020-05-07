@@ -6,7 +6,7 @@ function retrieveStorage() {
 		var selectionDD = document.getElementById(idDD);
 		selectionDD.onclick.apply(selectionDD);
 	}
-	else {
+	else { //QUIERO PONER ESTO EN UN FOR GENERAL PARA QUE SEA MÁS EXTENSIBLE.
 		localStorage.setItem("Jerry Wins", 0); localStorage.setItem("Jerry Losses", 0);
 		localStorage.setItem("Summer Wins", 0); localStorage.setItem("Summer Losses", 0);
 		localStorage.setItem("Morty Wins", 0); localStorage.setItem("Morty Losses", 0);

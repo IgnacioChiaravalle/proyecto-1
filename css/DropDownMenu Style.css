@@ -1,8 +1,8 @@
 .drop-down-menu {
 	/* Size */
 	width: 13%;
-	margin-top: 10px;
-	margin-left: 10px;
+	margin-top: 0.5%;
+	margin-left: 0.5%;
 	
 	/* Position */
 	position: absolute;
@@ -16,8 +16,8 @@
 
 	.drop-down-menu button {
 		/* Size */
-		border-radius: 10px;
-		padding: 8px;
+		border-radius: 5%/20%;
+		padding: 4%;
 		vertical-align: middle;
 
 		/* Background */
@@ -44,9 +44,8 @@
 		display: block;
 
 		/* Size */
-		margin-left: 11px;
-		border: 0px;
-		border-radius: 10px;
+		margin-left: 4.5%;
+		border-radius: 4.5%/7%;
 		
 		/* Background */
 		background-color: #fae49bff;
@@ -60,18 +59,18 @@
 
 		.drop-down-content a {
 			display: block;
-			padding: 2px;
-			border-radius: 10px;
+			padding: 3%;
+			border-radius: 4.5%/20%;
 		}
 		.drop-down-content a:hover {
 			background-color: #e89242ff;
 			color: black;
 			font-style: normal;
-			padding: 8px;
+			padding: 4%;
 		}
-		.drop-down-content a.activeDD { /* Active link looks different from rest, but keeps on-hover padding and font-style. */
+		.drop-down-content a.activeDD { /* Active link looks different from rest, but keeps on-hover font-style and padding. */
 			background-color: #24325fff;
 			color: white;
 			font-style: normal;
-			padding: 8px;
+			padding: 4%;
 		}
