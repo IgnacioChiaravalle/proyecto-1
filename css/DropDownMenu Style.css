@@ -61,7 +61,7 @@
 			display: block;
 			padding: 3%;
 			border-radius: 4.5%/20%;
-			font-size: 100%;
+			font-size: 99%;
 		}
 		.drop-down-content a:hover {
 			background-color: #e89242ff;
