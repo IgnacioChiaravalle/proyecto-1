@@ -6,11 +6,12 @@ function retrieveStorage() {
 		var selectionDD = document.getElementById(idDD);
 		selectionDD.onclick.apply(selectionDD);
 	}
-	else { //QUIERO PONER ESTO EN UN FOR GENERAL PARA QUE SEA MÁS EXTENSIBLE.
-		localStorage.setItem("Jerry Wins", 0); localStorage.setItem("Jerry Losses", 0);
-		localStorage.setItem("Summer Wins", 0); localStorage.setItem("Summer Losses", 0);
-		localStorage.setItem("Morty Wins", 0); localStorage.setItem("Morty Losses", 0);
-		localStorage.setItem("Rick Wins", 0); localStorage.setItem("Rick Losses", 0);
+	else {
+		var difficulties = document.getElementById("drop-down-content").children;
+		for (var i = 0; i < difficulties.length; i++) {
+			var difName = difficulties[i].id.substr(0, difficulties[i].id.indexOf('D'));
+			localStorage.setItem(difName + " Wins", 0); localStorage.setItem(difName + " Losses", 0);
+		}
 		setBackground("Backgrounds/Rick and Morty Portal.png");
 	}
 }

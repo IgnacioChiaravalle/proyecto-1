@@ -6,6 +6,7 @@ var imagesInPlay; //Number of images that will be in the game. Depends on sideLe
 var revealedImageCount; //Count of the images of which both copies have been revealed. Does not apply to bombs.
 var bombsCount; //Current quantity of bombs in the game.
 var lastImageIsBomb; //Holds boolean value of whether the last revealed image is a bomb or not.
+var script = null;
 
 
 function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document, which works as a GUI for the matrixOfImageRoutes.
@@ -66,7 +67,6 @@ function defineMatrix(sideLength) { //Creates a Matrix for handling the Grid.
 			}
 		}
 	}
-
 	for (var i = 0; i < sideLength; i++) { //The matrix is randomly shuffled.
 		for (var j = 0; j < sideLength; j++) {
 			var i1 = Math.floor(Math.random() * sideLength);
@@ -76,36 +76,24 @@ function defineMatrix(sideLength) { //Creates a Matrix for handling the Grid.
 			matrixOfImageRoutes[i1][j1] = temp;
 		}
 	}
-	/*var string = "";
-	for (var i = 0; i < sideLength; i++) {
-		for (var j = 0; j < sideLength; j++) {
-			if (j == 0) string += "[ ";
-			string += matrixOfImageRoutes[i][j] + ", ";
-			if (j == sideLength - 1) string += " ]\n";
-		}
-	}
-	console.log(string);*/ //IMPRIMIR LA MATRIZ.
-
 }
 
 
 function setOnClicks() {
-		var table = document.getElementById("gameGrid");
-		var rows = table.getElementsByTagName("tr");
-		for (var i = 0; i < rows.length; i++) {
-			row = rows[i];
-			for (var j = 0; j < rows.length; j++) {
-				row.getElementsByTagName("td")[j].onclick = function() {
-					var id = this.id.toString();
-					posI = parseInt(id.substr(0, id.indexOf(' ')), 10);
-					posJ = parseInt(id.substr(id.indexOf(' ' + 1), id.length), 10);
-					onClickCell(this, posI, posJ);
-				};
-			}
+	var table = document.getElementById("gameGrid");
+	var rows = table.getElementsByTagName("tr");
+	for (var i = 0; i < rows.length; i++) {
+		row = rows[i];
+		for (var j = 0; j < rows.length; j++) {
+			row.getElementsByTagName("td")[j].onclick = function() {
+				var id = this.id.toString();
+				posI = parseInt(id.substr(0, id.indexOf(' ')), 10);
+				posJ = parseInt(id.substr(id.indexOf(' ' + 1), id.length), 10);
+				onClickCell(this, posI, posJ);
+			};
 		}
 	}
-
-
+}
 
 function onClickCell(cell, posI, posJ) {
 	if (cell.classList.contains("covered-cell")) {
@@ -134,7 +122,7 @@ function onClickCell(cell, posI, posJ) {
 	function handleBomb(cell){
 		clearArray();
 		if (revealedBombs.includes(cell))
-			endGame(false);
+			triggerEnding(false);
 		else {
 			revealedBombs.push(cell);
 			lastImageIsBomb = true;
@@ -169,50 +157,16 @@ function checkWin(cell) { //If called, the last clicked-cell does not have a bom
 	if (revealedImageCount < imagesInPlay - 1)
 		return false;
 	if (currentlyRevealedImages.length == 1 && !lastImageIsBomb) {
-		endGame(true);
+		triggerEnding(true);
 		return true;
 	}
 	return false;
 }
 
 
-function endGame(win) {
-	var msg = win ? "Victoria!!" : "Derrota!!";
-	setTimeout(() => {
-		console.log(msg);
-
-		var table = document.getElementById("gameGrid");
-		var rows = table.getElementsByTagName("tr");
-		for (var i = 0; i < rows.length; i++) {
-			var row = rows[i];
-			for (var j = 0; j < rows.length; j++) {
-				var td = row.getElementsByTagName("td")[j];
-				if (td.classList.contains("covered-cell"))
-					td.classList.remove("covered-cell");
-				td.classList.add("uncovered-cell");
-				td.style.backgroundImage = "url('" + matrixOfImageRoutes[i][j] + "')";
-			}
-		} //All images are revealed.
-
-		setResultsCount(win);
-
-	}, 2000);
-}
-
-function setResultsCount(win) {
-	var selectionDD = document.getElementsByClassName("activeDD");
-	var difficulty = selectionDD[0].id;
-	difficulty = difficulty.substr(0, difficulty.indexOf('D'));
-	var winsCount = localStorage.getItem(difficulty + " Wins");
-	var lossesCount = localStorage.getItem(difficulty + " Losses");
-	if (win) {
-		winsCount++;
-		localStorage.setItem(difficulty + " Wins", winsCount)
-	}
-	else {
-		lossesCount++;
-		localStorage.setItem(difficulty + " Losses", lossesCount);
-	}
-	console.log("Victorias en esta dificultad: " + winsCount + "\nDerrotas en esta dificultad: " + lossesCount);
-
+function triggerEnding(win) {
+	var script = document.createElement('script');
+	document.body.appendChild(script);
+	script.setAttribute('src', 'js/GameEnder.js');
+	script.onload = function() { endGame(win, matrixOfImageRoutes); }
 }
