@@ -1,0 +1,99 @@
+.pop-up {
+	/* Display */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 2000ms ease-in-out;
+
+	/* Size */
+	width: 30%;
+	border: 5px outset #24325fff;
+	border-radius: 7%/15%;
+	z-index: 10;
+	
+	/* Background */
+	background-color: rgba(173, 136, 82, 0.85);
+}
+
+.pop-up.active {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.pop-up-header {
+	padding: 2%;
+	border-bottom: 2px ridge #24325fff;
+}
+	.pop-up-header #pop-up-title {
+		color: #2eb1d3;
+		text-shadow: -4px -4px 3px #94e352, 4px -4px 3px #94e352, -4px 4px 3px #94e352, 4px 4px 3px #94e352;
+		text-align: center;
+		font-size: 500%;
+		font-family: Misfits;
+	}
+
+#pop-up-body {
+	display: block;
+	padding: 5%;
+	align-items: center;
+	font-size: 200%;
+	font-family: Misfits;
+}
+	#pop-up-body .result-count {
+		display: flex;
+		padding: 3% 0%;
+		justify-content: space-between;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	}
+		#pop-up-body .result-count .sentence {
+			color: #445d91;
+		}
+		#pop-up-body .result-count .number {
+			color: #2eb1d3;
+			font-style: bold;
+		}
+
+	#pop-up-body .play-again-button {
+		/* Size */
+		border: 5px outset #e49c58;
+		border-radius: 5%/17%;
+		margin-top: 5%;
+		margin-bottom: 0%;
+
+		/* Background */
+		background-color: #fb6467ff;
+
+		/* Text */
+		text-align: center;
+	}
+		#pop-up-body .play-again-button #play-again-button {
+			color: #2a9cba;
+			text-shadow: -1px -1px 0 #dadada, 1px -1px 0 #dadada, -1px 1px 0 #dadada, 1px 1px 0 #dadada;
+			padding: 2% 26.5%;
+			text-decoration: none; /* Remove underline from link */
+		}
+		#pop-up-body .play-again-button #play-again-button:hover {
+			color: #8bf037;
+			text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+		}
+	#pop-up-body .play-again-button:hover {
+		background-color: #da3c3f;
+	}
+
+#overlay {
+	/* Display */
+	position: fixed;
+	
+	top: 0; left: 0; right: 0; bottom: 0;
+
+	/* Background */
+	opacity: 0;
+	background-color: #ad4aa2;
+
+	/* Pointer Events */
+	pointer-events: none;
+}
+
+#overlay.active {
+	opacity: 0.5;
+}

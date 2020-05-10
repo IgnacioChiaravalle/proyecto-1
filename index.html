@@ -8,6 +8,7 @@
 		<link rel = "stylesheet" type = "text/css" href = "css/NavBar Style.css"/>
 		<link rel = "stylesheet" type = "text/css" href = "css/DropDownMenu Style.css"/>
 		<link rel = "stylesheet" type = "text/css" href = "css/GameGrid Style.css"/>
+		<link rel = "stylesheet" type = "text/css" href = "css/Ending Style.css"/>
 		<link rel="shortcut icon" href="favicon-for-site.ico" />
 	</head>
 
@@ -15,7 +16,7 @@
 	<body>
 
 
-		<nav>
+		<nav id = "navbar">
 			<div>
 				<a class = "navbar-gamename">Rick and Morty's Matcher</a>
 				<div class = "navbar-options">
@@ -60,12 +61,30 @@
 
 		<table id = "gameGrid" class = "table"></table>
 
-		
+		<div id = "ending-pop-up" class = "pop-up">
+			<div class = "pop-up-header">
+				<div id = "pop-up-title"></div>
+			</div>
+			<div id = "pop-up-body">
+				<div class = "result-count">
+					<a id = "pop-up-text-wins" class = "sentence"></a>
+					<a id = "pop-up-text-wins-number" class = "number"></a>
+				</div>
+				<div class = "result-count">
+					<a id = "pop-up-text-losses" class = "sentence"></a>
+					<a id = "pop-up-text-losses-number" class = "number"></a>
+				</div>
+				<p class = "play-again-button">
+					<a id = "play-again-button" href = "index.html">Jugar de Nuevo</a>
+				</p>
+			</div>
+		</div>
+		<div id = "overlay"></div>
+
 		<script type = "text/javascript">
 			//clearStorage(); //This is for testing purposes only. It clears the localStorage so that the user is shown what they would see for the first time.
 			retrieveStorage();
 		</script>
-
 
 	</body>
 
