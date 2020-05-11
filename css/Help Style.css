@@ -60,7 +60,7 @@ h1 {
 		color: #e89242;
 		font-family: CaveatBrush;
 	}
-		#help-text #site-headline a {
+		#help-text #site-headline span {
 			color: #2eb1d3;
 			font-size: 120%;
 			text-shadow: -2px -2px 1px #94e352, 2px -2px 1px #94e352, -2px 2px 1px #94e352, 2px 2px 1px #94e352;
@@ -80,11 +80,14 @@ h1 {
 	}
 
 	#help-text p {
-		text-indent: 2%;
 		text-shadow: -1px -1px 3px #000, 1px -1px 3px #000, -1px 1px 3px #000, 1px 1px 3px #000;
 		font-size: 130%;
 		font-family: PatrickHandSC;
+		margin: 0;
 	}
+		#help-text p.indented {
+			text-indent: 2%;
+		}
 		#help-text p a {
 			color: #7ced1e;
 			font-style: italic;
@@ -94,3 +97,15 @@ h1 {
 			font-weight: bold;
 			font-style: normal;
 		}
+		#help-text p span.r-and-m {
+			color: #31C2E7;
+			text-shadow: -1px -1px 0 #94e352, 1px -1px 0 #94e352, -1px 1px 0 #94e352, 1px 1px 0 #94e352;
+			font-family: Misfits;
+		}
+
+
+	#help-text ul {
+		margin-top: 0;
+		margin-left: 1%;
+		margin-bottom: 1%;
+	}
