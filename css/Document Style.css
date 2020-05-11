@@ -1,6 +1,6 @@
 @font-face {
 	font-family: Misfits;
-	src: url(MISFITS_Font.TTF);
+	src: url(Fonts/Misfits_Font.TTF);
 }
 
 html{
@@ -10,7 +10,8 @@ html{
 	cursor: auto;
 }
 
-body { /* Background should be fixed at all times. */
+body { /* Background should be fixed at all times in all documents. */
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+	background-position: fixed;
 }
