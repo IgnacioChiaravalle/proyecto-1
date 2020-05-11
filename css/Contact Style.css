@@ -83,12 +83,12 @@ body {
 			color: #e89242ff;
 			text-shadow: -2px -2px 2px #000, 2px -2px 2px #000, -2px 2px 2px #000, 2px 2px 2px #000;
 			font-weight: bold;
-			font-family: CaveatBrush;
+			font-family: "CaveatBrush";
 		}
 		#author #author-name {
 			color: #fae48bff;
 			text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
-			font-family: ShadowsIntoLight;
+			font-family: "ShadowsIntoLight";
 		}
 
 	#email {
@@ -101,19 +101,19 @@ body {
 			text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000;
 			font-size: 185%;
 			font-weight: bold;
-			font-family: GloriaHallelujah;
+			font-family: "GloriaHallelujah";
 		}
 		#email #email-adresses {
 			display: block;
 			padding: 0%;
-			font-family: NanumPenScript;
+			font-family: "NanumPenScript";
 		}
 			#email #email-adresses a {
 				color: #8266c4;
 				text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
 				font-size: 225%;
 				font-style: italic;
-				text-decoration: none; /* Remove underline from links */
+				text-decoration: none;
 			}
 			#email #email-adresses a:hover {
 				font-weight: bold;
@@ -122,21 +122,21 @@ body {
 
 	#project-regarded {
 		font-size: 130%;
-		font-family: PatrickHandSC;
+		font-family: "PatrickHandSC";
 	}
 		#project-regarded-title {
 			color: #e63034;
 			text-shadow: -1px -1px 1px #a3a3a3, 1px -1px 1px #a3a3a3, -1px 1px 1px #a3a3a3, 1px 1px 1px #a3a3a3;
 			font-size: 160%;
 			font-weight: bold;
-			font-family: Neucha;
+			font-family: "Neucha";
 			line-height: 1%;
 		}
 
 		#project-regarded a {
 			color: #7a61b6;
 			font-style: italic;
-			text-decoration: none; /* Remove underline from links */
+			text-decoration: none;
 		}
 		#project-regarded a:hover {
 			font-weight: bold;
