@@ -2,6 +2,11 @@ body {
 	background-image: url("Backgrounds/Help Background.jpg");
 }
 
+h1 {
+	line-height: 25%;
+	margin-top: 3.5%;
+}
+
 #help-contents {
 	display: block;
 	width: 100%;
@@ -38,15 +43,14 @@ body {
 	}
 
 #help-text {
-	margin-top: 10%;
+	margin-top: 9%;
 	margin-left: auto;
 	margin-right: auto;
 	float: center;
 
 	/* Size */
-	width: 92.5%;
-	padding: 2.5%;
-	border-radius: 3%/3%;
+	width: 98%;
+	padding: 2.5% 0%;
 
 	/* Text */
 	color: white;
@@ -54,19 +58,39 @@ body {
 	#help-text #site-headline {
 		font-size: 250%;
 		color: #e89242;
-		text-shadow: -1px -1px 1px #a3a3a3, 1px -1px 0 #a3a3a3, -1px 1px 0 #a3a3a3, 1px 1px 0 #a3a3a3;
 		font-family: CaveatBrush;
 	}
 		#help-text #site-headline a {
 			color: #2eb1d3;
 			font-size: 120%;
-			text-shadow: -2px -2px 2px #94e352, 2px -2px 2px #94e352, -2px 2px 2px #94e352, 2px 2px 2px #94e352;
+			text-shadow: -2px -2px 1px #94e352, 2px -2px 1px #94e352, -2px 2px 1px #94e352, 2px 2px 1px #94e352;
 			font-family: Misfits;
 		}
 
 	#help-text #how-to-play-headline {
 		font-size: 250%;
-		color: #e89242;
-		text-shadow: -1px -1px 1px #a3a3a3, 1px -1px 0 #a3a3a3, -1px 1px 0 #a3a3a3, 1px 1px 0 #a3a3a3;
-		font-family: CaveatBrush;
+		color: #e1e622;
+		font-family: GloriaHallelujah;
 	}
+
+	#help-text #notice-headline {
+		font-size: 250%;
+		color: #eb1317;
+		font-family: Neucha;
+	}
+
+	#help-text p {
+		text-indent: 2%;
+		text-shadow: -1px -1px 3px #000, 1px -1px 3px #000, -1px 1px 3px #000, 1px 1px 3px #000;
+		font-size: 130%;
+		font-family: PatrickHandSC;
+	}
+		#help-text p a {
+			color: #7ced1e;
+			font-style: italic;
+			text-decoration: none;
+		}
+		#help-text p a:hover {
+			font-weight: bold;
+			font-style: normal;
+		}

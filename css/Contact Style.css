@@ -68,7 +68,7 @@ body {
 	}
 		#email #email-declare {
 			color: #917c5dff;
-			text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000;
+			text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
 			font-size: 185%;
 			font-weight: bold;
 			font-family: GloriaHallelujah;
