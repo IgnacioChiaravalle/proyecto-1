@@ -1,26 +1,26 @@
 @font-face {
 	font-family: CaveatBrush;
-	src: url("Fonts/CaveatBrush_Font.TTF");
+	src: url("FontsFolder/CaveatBrush_Font.TTF");
 }
 @font-face {
 	font-family: ShadowsIntoLight;
-	src: url("Fonts/ShadowsIntoLight_Font.TTF");
+	src: url("FontsFolder/ShadowsIntoLight_Font.TTF");
 }
 @font-face {
 	font-family: GloriaHallelujah;
-	src: url("Fonts/GloriaHallelujah_Font.TTF");
+	src: url("FontsFolder/GloriaHallelujah_Font.TTF");
 }
 @font-face {
 	font-family: NanumPenScript;
-	src: url("Fonts/NanumPenScript_Font.TTF");
+	src: url("FontsFolder/NanumPenScript_Font.TTF");
 }
 @font-face {
 	font-family: PatrickHandSC;
-	src: url("Fonts/PatrickHandSC_Font.TTF");
+	src: url("FontsFolder/PatrickHandSC_Font.TTF");
 }
 @font-face {
 	font-family: Neucha;
-	src: url("Fonts/Neucha_Font.TTF");
+	src: url("FontsFolder/Neucha_Font.TTF");
 }
 
 @keyframes createBox {
@@ -83,12 +83,12 @@ body {
 			color: #e89242ff;
 			text-shadow: -2px -2px 2px #000, 2px -2px 2px #000, -2px 2px 2px #000, 2px 2px 2px #000;
 			font-weight: bold;
-			font-family: "CaveatBrush";
+			font-family: CaveatBrush;
 		}
 		#author #author-name {
 			color: #fae48bff;
 			text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
-			font-family: "ShadowsIntoLight";
+			font-family: ShadowsIntoLight;
 		}
 
 	#email {
@@ -101,12 +101,12 @@ body {
 			text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000;
 			font-size: 185%;
 			font-weight: bold;
-			font-family: "GloriaHallelujah";
+			font-family: GloriaHallelujah;
 		}
 		#email #email-adresses {
 			display: block;
 			padding: 0%;
-			font-family: "NanumPenScript";
+			font-family: NanumPenScript;
 		}
 			#email #email-adresses a {
 				color: #8266c4;
@@ -122,14 +122,14 @@ body {
 
 	#project-regarded {
 		font-size: 130%;
-		font-family: "PatrickHandSC";
+		font-family: PatrickHandSC;
 	}
 		#project-regarded-title {
 			color: #e63034;
 			text-shadow: -1px -1px 1px #a3a3a3, 1px -1px 1px #a3a3a3, -1px 1px 1px #a3a3a3, 1px 1px 1px #a3a3a3;
 			font-size: 160%;
 			font-weight: bold;
-			font-family: "Neucha";
+			font-family: Neucha;
 			line-height: 1%;
 		}
 
