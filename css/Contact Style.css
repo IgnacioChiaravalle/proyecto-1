@@ -1,26 +1,26 @@
 @font-face {
 	font-family: CaveatBrush;
-	src: url(Fonts/CaveatBrush_Font.TTF);
+	src: url(Fonts/CaveatBrush_Font.ttf);
 }
 @font-face {
 	font-family: ShadowsIntoLight;
-	src: url(Fonts/ShadowsIntoLight_Font.TTF);
+	src: url(Fonts/ShadowsIntoLight_Font.ttf);
 }
 @font-face {
 	font-family: GloriaHallelujah;
-	src: url(Fonts/GloriaHallelujah_Font.TTF);
+	src: url(Fonts/GloriaHallelujah_Font.ttf);
 }
 @font-face {
 	font-family: NanumPenScript;
-	src: url(Fonts/NanumPenScript_Font.TTF);
+	src: url(Fonts/NanumPenScript_Font.ttf);
 }
 @font-face {
 	font-family: PatrickHandSC;
-	src: url(Fonts/PatrickHandSC_Font.TTF);
+	src: url(Fonts/PatrickHandSC_Font.ttf);
 }
 @font-face {
 	font-family: Neucha;
-	src: url(Fonts/Neucha_Font.TTF);
+	src: url(Fonts/Neucha_Font.ttf);
 }
 
 @keyframes createBox {
