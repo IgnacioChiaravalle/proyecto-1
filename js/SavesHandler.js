@@ -12,7 +12,7 @@ function retrieveStorage() {
 			var difName = difficulties[i].id.substr(0, difficulties[i].id.indexOf('D'));
 			localStorage.setItem(difName + " Wins", 0); localStorage.setItem(difName + " Losses", 0);
 		}
-		setBackground("Backgrounds/Rick and Morty Portal.png");
+		setBackground("Backgrounds/Default - Background.png");
 	}
 }
 
