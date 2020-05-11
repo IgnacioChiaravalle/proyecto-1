@@ -3,6 +3,32 @@
 	src: url(Fonts/Misfits_Font.TTF);
 }
 
+@font-face {
+	font-family: CaveatBrush;
+	src: url(Fonts/CaveatBrush_Font.TTF);
+}
+@font-face {
+	font-family: ShadowsIntoLight;
+	src: url(Fonts/ShadowsIntoLight_Font.TTF);
+}
+@font-face {
+	font-family: GloriaHallelujah;
+	src: url(Fonts/GloriaHallelujah_Font.TTF);
+}
+@font-face {
+	font-family: NanumPenScript;
+	src: url(Fonts/NanumPenScript_Font.TTF);
+}
+@font-face {
+	font-family: PatrickHandSC;
+	src: url(Fonts/PatrickHandSC_Font.TTF);
+}
+@font-face {
+	font-family: Neucha;
+	src: url(Fonts/Neucha_Font.TTF);
+}
+
+
 html{
 	height: 100%;
 	width: 100%;

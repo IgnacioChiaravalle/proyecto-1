@@ -70,7 +70,7 @@
 			color: #2a9cba;
 			text-shadow: -1px -1px 0 #dadada, 1px -1px 0 #dadada, -1px 1px 0 #dadada, 1px 1px 0 #dadada;
 			padding: 2% 26.5%;
-			text-decoration: none; /* Remove underline from link */
+			text-decoration: none;
 		}
 		#pop-up-body .play-again-button #play-again-button:hover {
 			color: #8bf037;

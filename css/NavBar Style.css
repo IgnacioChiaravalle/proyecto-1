@@ -53,7 +53,7 @@ nav {
 			text-align: center;
 			font-style: italic;
 			font-size: 200%;
-			text-decoration: none; /* Remove underline from links */
+			text-decoration: none;
 		}
 		.navbar-link:hover {
 			/* Text */

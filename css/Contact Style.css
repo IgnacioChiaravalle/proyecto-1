@@ -2,7 +2,7 @@
 	from { transform: scale(0); }
 	to { transform: scale(1); }
 }
-
+/*
 @font-face {
 	font-family: CaveatBrush;
 	src: url(Fonts/CaveatBrush_Font.TTF);
@@ -26,7 +26,7 @@
 @font-face {
 	font-family: Neucha;
 	src: url(Fonts/Neucha_Font.TTF);
-}
+}*/
 
 body {
 	background-image: url("Backgrounds/Contact Background.png");
