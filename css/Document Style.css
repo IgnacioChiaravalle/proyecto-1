@@ -2,6 +2,35 @@
 	font-family: Misfits;
 	src: url(Fonts/Misfits_Font.TTF);
 }
+@font-face {
+	font-family: CaveatBrush;
+	src: url(Fonts/CaveatBrush_Font.TTF);
+}
+@font-face {
+	font-family: ShadowsIntoLight;
+	src: url(Fonts/ShadowsIntoLight_Font.TTF);
+}
+@font-face {
+	font-family: GloriaHallelujah;
+	src: url(Fonts/GloriaHallelujah_Font.TTF);
+}
+@font-face {
+	font-family: NanumPenScript;
+	src: url(Fonts/NanumPenScript_Font.TTF);
+}
+@font-face {
+	font-family: PatrickHandSC;
+	src: url(Fonts/PatrickHandSC_Font.TTF);
+}
+@font-face {
+	font-family: Neucha;
+	src: url(Fonts/Neucha_Font.TTF);
+}
+
+@keyframes expandFromCenter {
+	from { transform: scale(0); }
+	to { transform: scale(1); }
+}
 
 
 html{
@@ -14,5 +43,5 @@ html{
 body { /* Background should be fixed at all times in all documents. */
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	background-position: fixed;
+	background-attachment: fixed;
 }
