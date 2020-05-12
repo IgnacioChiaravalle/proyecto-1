@@ -1,4 +1,4 @@
-.drop-down-menu {
+#drop-down-menu {
 	/* Size */
 	width: 13%;
 	margin-top: 0.5%;
@@ -14,7 +14,7 @@
 	font-family: Misfits;
 }
 
-	.drop-down-menu button {
+	#drop-down-menu button {
 		/* Size */
 		width: 100%;
 		border-radius: 4.5%/20%;
@@ -32,15 +32,15 @@
 		font-family: Misfits;
 		
 	}
-	.drop-down-menu:hover button {
+	#drop-down-menu:hover button {
 		background-color: #b7e4f9ff;
 		cursor: pointer;
 	}
 
-	.drop-down-content { /* Menu's content is hidden by default. */
+	#drop-down-content { /* Menu's content is hidden by default. */
 		display: none;
 	}
-	.drop-down-menu:hover .drop-down-content { /* Show menu's content on hover. */
+	#drop-down-menu:hover #drop-down-content { /* Show menu's content on hover. */
 		/* Display */
 		display: block;
 
@@ -58,21 +58,27 @@
 		cursor: pointer;
 	}
 
-		.drop-down-content a {
+		#drop-down-content a {
 			display: block;
 			padding: 3%;
 			border-radius: 4.5%/20%;
 			font-size: 99%;
 		}
-		.drop-down-content a:hover {
+		#drop-down-content a:hover {
 			background-color: #e89242ff;
 			color: black;
 			font-style: normal;
 			padding: 4%;
 		}
-		.drop-down-content a.activeDD { /* Active link looks different from rest, but keeps on-hover font-style and padding. */
+		#drop-down-content a.activeDD { /* Active link looks different from rest, but keeps on-hover font-style and padding. */
 			background-color: #24325fff;
 			color: white;
 			font-style: normal;
 			padding: 4%;
 		}
+
+			#drop-down-content a img {
+				height: 80%;
+				width: 15%;
+			}
+
