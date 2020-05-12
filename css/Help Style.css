@@ -35,9 +35,9 @@ h1 {
 		animation: expandFromCenter 2100ms;
 
 		/* Text */
-		color: #2eb1d3;
+		color: rgba(46, 177, 211, 1);
 		text-align: center;
-		text-shadow: -4px -4px 3px #94e352, 4px -4px 3px #94e352, -4px 4px 3px #94e352, 4px 4px 3px #94e352;
+		text-shadow: -4px -4px 3px rgba(148, 227, 82, 1), 4px -4px 3px rgba(148, 227, 82, 1), -4px 4px 3px rgba(148, 227, 82, 1), 4px 4px 3px rgba(148, 227, 82, 1);
 		font-size: 800%;
 		font-family: Misfits;
 	}
@@ -57,31 +57,31 @@ h1 {
 }
 	#help-text #site-headline {
 		font-size: 250%;
-		color: #e89242;
+		color: rgba(232, 146, 66, 1);
 		font-family: CaveatBrush;
 	}
 		#help-text #site-headline span {
-			color: #2eb1d3;
+			color: rgba(46, 177, 211, 1);
 			font-size: 120%;
-			text-shadow: -2px -2px 1px #94e352, 2px -2px 1px #94e352, -2px 2px 1px #94e352, 2px 2px 1px #94e352;
+			text-shadow: -2px -2px 1px rgba(148, 227, 82, 1), 2px -2px 1px rgba(148, 227, 82, 1), -2px 2px 1px rgba(148, 227, 82, 1), 2px 2px 1px rgba(148, 227, 82, 1);
 			font-family: Misfits;
 		}
 
 	#help-text #how-to-play-headline {
 		font-size: 250%;
 		margin-bottom: 2.5%;
-		color: #e1e622;
+		color: rgba(225, 230, 34, 1);
 		font-family: GloriaHallelujah;
 	}
 
 	#help-text #notice-headline {
 		font-size: 250%;
-		color: #eb1317;
+		color: rgba(235, 19, 23, 1);
 		font-family: Neucha;
 	}
 
 	#help-text p {
-		text-shadow: -1px -1px 3px #000, 1px -1px 3px #000, -1px 1px 3px #000, 1px 1px 3px #000;
+		text-shadow: -1px -1px 3px rgba(0, 0, 0, 1), 1px -1px 3px rgba(0, 0, 0, 1), -1px 1px 3px rgba(0, 0, 0, 1), 1px 1px 3px rgba(0, 0, 0, 1);
 		font-size: 130%;
 		font-family: PatrickHandSC;
 		margin: 0;
@@ -90,7 +90,7 @@ h1 {
 			text-indent: 2%;
 		}
 		#help-text p a {
-			color: #7ced1e;
+			color: rgba(124, 237, 30, 1);
 			font-style: italic;
 			text-decoration: none;
 		}
@@ -99,12 +99,12 @@ h1 {
 			font-style: normal;
 		}
 		#help-text p span.r-and-m {
-			color: #31c2e7;
-			text-shadow: -1px -1px 0 #94e352, 1px -1px 0 #94e352, -1px 1px 0 #94e352, 1px 1px 0 #94e352;
+			color: rgba(49, 194, 231, 1);
+			text-shadow: -1px -1px 0 rgba(148, 227, 82, 1), 1px -1px 0 rgba(148, 227, 82, 1), -1px 1px 0 rgba(148, 227, 82, 1), 1px 1px 0 rgba(148, 227, 82, 1);
 			font-family: Misfits;
 		}
 		#help-text p span.bomb {
-			color: #e25822 ;
+			color: rgba(226, 88, 34, 1);
 			font-size: 85%;
 			font-family: PlasticExplosive;
 		}

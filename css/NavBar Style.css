@@ -4,12 +4,9 @@ nav {
 	padding: 0.1%;
 	border-radius: 0.5%/15%;
 
-	/* Opacity */
-	opacity: 0.925;
-
 	/* Text */
 	font-family: Misfits;
-	background: #374983;
+	background: rgba(55, 73, 131, 0.925);
 }
 	
 	.navbar-gamename {
@@ -23,7 +20,7 @@ nav {
 		padding: 0.4%;
 
 		/* Text */
-		color: #fae48b;
+		color: rgba(250, 228, 139, 1);
 		text-align: left;
 		font-style: bold;
 		font-size: 300%;
@@ -49,7 +46,7 @@ nav {
 			padding: 5%;
 
 			/* Text */
-			color: #a6eee6;
+			color: rgba(166, 238, 230, 1);
 			text-align: center;
 			font-style: italic;
 			font-size: 200%;
@@ -57,7 +54,7 @@ nav {
 		}
 		.navbar-link:hover {
 			/* Text */
-			color: #fb6467;
+			color: rgba(251, 100, 103, 1);
 			font-style: normal;
 
 			/* Cursor */
@@ -66,7 +63,7 @@ nav {
 
 		#activeNavBar {
 			/* Text */
-			color: #e762d7;
+			color: rgba(231, 98, 215, 1);
 			font-style: normal;
 			font-size: 215%;
 

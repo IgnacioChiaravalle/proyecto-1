@@ -18,8 +18,8 @@ body {
 	transform: rotate(-48deg);
 
 	/* Text */
-	color: #2eb1d3;
-	text-shadow: -4px -4px 3px #94e352, 4px -4px 3px #94e352, -4px 4px 3px #94e352, 4px 4px 3px #94e352;
+	color: rgba(46, 177, 211, 1);
+	text-shadow: -4px -4px 3px rgba(148, 227, 82, 1), 4px -4px 3px rgba(148, 227, 82, 1), -4px 4px 3px rgba(148, 227, 82, 1), 4px 4px 3px rgba(148, 227, 82, 1);
 	font-size: 800%;
 	font-family: Misfits;
 }
@@ -33,7 +33,7 @@ body {
 	/* Size */
 	width: 60%;
 	padding: 2.5%;
-	border: 5px outset #e762d7;
+	border: 5px outset rgba(231, 98, 215, 1);
 	border-radius: 7%/15%;
 
 	/* Animation */
@@ -50,14 +50,14 @@ body {
 		font-size: 300%;
 	}
 		#author #author-declare {
-			color: #e89242;
-			text-shadow: -2px -2px 2px #000, 2px -2px 2px #000, -2px 2px 2px #000, 2px 2px 2px #000;
+			color: rgba(232, 146, 66, 1);
+			text-shadow: -2px -2px 2px rgba(0, 0, 0, 1), 2px -2px 2px rgba(0, 0, 0, 1), -2px 2px 2px rgba(0, 0, 0, 1), 2px 2px 2px rgba(0, 0, 0, 1);
 			font-weight: bold;
 			font-family: CaveatBrush;
 		}
 		#author #author-name {
-			color: #fae48b;
-			text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+			color: rgba(250, 228, 139, 1);
+			text-shadow: -1px -1px 2px rgba(0, 0, 0, 1), 1px -1px 2px rgba(0, 0, 0, 1), -1px 1px 2px rgba(0, 0, 0, 1), 1px 1px 2px rgba(0, 0, 0, 1);
 			font-family: ShadowsIntoLight;
 		}
 
@@ -67,8 +67,8 @@ body {
 		padding: 1%;
 	}
 		#email #email-declare {
-			color: #917c5d;
-			text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+			color: rgba(145, 124, 93, 1);
+			text-shadow: -1px -1px 1px rgba(0, 0, 0, 1), 1px -1px 1px rgba(0, 0, 0, 1), -1px 1px 1px rgba(0, 0, 0, 1), 1px 1px 1px rgba(0, 0, 0, 1);
 			font-size: 185%;
 			font-weight: bold;
 			font-family: GloriaHallelujah;
@@ -79,8 +79,8 @@ body {
 			font-family: NanumPenScript;
 		}
 			#email #email-adresses a {
-				color: #8266c4;
-				text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+				color: rgba(130, 102, 196, 1);
+				text-shadow: -1px -1px 1px rgba(0, 0, 0, 1), 1px -1px 1px rgba(0, 0, 0, 1), -1px 1px 1px rgba(0, 0, 0, 1), 1px 1px 1px rgba(0, 0, 0, 1);
 				font-size: 225%;
 				font-style: italic;
 				text-decoration: none;
@@ -95,8 +95,8 @@ body {
 		font-family: PatrickHandSC;
 	}
 		#project-regarded-title {
-			color: #e63034;
-			text-shadow: -1px -1px 1px #a3a3a3, 1px -1px 1px #a3a3a3, -1px 1px 1px #a3a3a3, 1px 1px 1px #a3a3a3;
+			color: rgba(230, 48, 52, 1);
+			text-shadow: -1px -1px 1px rgba(163, 163, 163, 1), 1px -1px 1px rgba(163, 163, 163, 1), -1px 1px 1px rgba(163, 163, 163, 1), 1px 1px 1px rgba(163, 163, 163, 1);
 			font-size: 160%;
 			font-weight: bold;
 			font-family: Neucha;
@@ -104,7 +104,7 @@ body {
 		}
 
 		#project-regarded a {
-			color: #7a61b6;
+			color: rgba(122, 97, 182, 1);
 			font-style: italic;
 			text-decoration: none;
 		}
