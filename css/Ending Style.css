@@ -8,7 +8,7 @@
 
 	/* Size */
 	width: 30%;
-	border: 5px outset #24325fff;
+	border: 5px outset #24325f;
 	border-radius: 7%/15%;
 	z-index: 10;
 	
@@ -22,7 +22,7 @@
 
 .pop-up-header {
 	padding: 2%;
-	border-bottom: 2px ridge #24325fff;
+	border-bottom: 2px ridge #24325f;
 }
 	.pop-up-header #pop-up-title {
 		color: #2eb1d3;
@@ -61,7 +61,7 @@
 		margin-bottom: 0%;
 
 		/* Background */
-		background-color: #fb6467ff;
+		background-color: #fb6467;
 
 		/* Text */
 		text-align: center;

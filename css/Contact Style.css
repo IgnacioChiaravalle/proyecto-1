@@ -33,7 +33,7 @@ body {
 	/* Size */
 	width: 60%;
 	padding: 2.5%;
-	border: 5px outset #e762d7ff;
+	border: 5px outset #e762d7;
 	border-radius: 7%/15%;
 
 	/* Animation */
@@ -50,13 +50,13 @@ body {
 		font-size: 300%;
 	}
 		#author #author-declare {
-			color: #e89242ff;
+			color: #e89242;
 			text-shadow: -2px -2px 2px #000, 2px -2px 2px #000, -2px 2px 2px #000, 2px 2px 2px #000;
 			font-weight: bold;
 			font-family: CaveatBrush;
 		}
 		#author #author-name {
-			color: #fae48bff;
+			color: #fae48b;
 			text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
 			font-family: ShadowsIntoLight;
 		}
@@ -67,7 +67,7 @@ body {
 		padding: 1%;
 	}
 		#email #email-declare {
-			color: #917c5dff;
+			color: #917c5d;
 			text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
 			font-size: 185%;
 			font-weight: bold;

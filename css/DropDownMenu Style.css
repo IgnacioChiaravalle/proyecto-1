@@ -22,10 +22,10 @@
 		vertical-align: middle;
 
 		/* Background */
-		background-color: #fae49bff;
+		background-color: #fae49b;
 		
 		/* Text */
-		color: #82491eff;
+		color: #82491e;
 		text-align: center;
 		font-style: italic;
 		font-size: 112%;
@@ -33,7 +33,7 @@
 		
 	}
 	#drop-down-menu:hover button {
-		background-color: #b7e4f9ff;
+		background-color: #b7e4f9;
 		cursor: pointer;
 	}
 
@@ -49,10 +49,10 @@
 		border-radius: 4.5%/7%;
 		
 		/* Background */
-		background-color: #fae49bff;
+		background-color: #fae49b;
 		
 		/* Text */
-		color: #82491eff;
+		color: #82491e;
 		
 		/* Cursor */
 		cursor: pointer;
@@ -65,13 +65,13 @@
 			font-size: 99%;
 		}
 		#drop-down-content a:hover {
-			background-color: #e89242ff;
+			background-color: #e89242;
 			color: black;
 			font-style: normal;
 			padding: 4%;
 		}
 		#drop-down-content a.activeDD { /* Active link looks different from rest, but keeps on-hover font-style and padding. */
-			background-color: #24325fff;
+			background-color: #24325f;
 			color: white;
 			font-style: normal;
 			padding: 4%;

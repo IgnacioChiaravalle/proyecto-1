@@ -23,7 +23,7 @@ nav {
 		padding: 0.4%;
 
 		/* Text */
-		color: #fae48bff;
+		color: #fae48b;
 		text-align: left;
 		font-style: bold;
 		font-size: 300%;
@@ -49,7 +49,7 @@ nav {
 			padding: 5%;
 
 			/* Text */
-			color: #a6eee6ff;
+			color: #a6eee6;
 			text-align: center;
 			font-style: italic;
 			font-size: 200%;
@@ -57,7 +57,7 @@ nav {
 		}
 		.navbar-link:hover {
 			/* Text */
-			color: #fb6467ff;
+			color: #fb6467;
 			font-style: normal;
 
 			/* Cursor */
@@ -66,7 +66,7 @@ nav {
 
 		#activeNavBar {
 			/* Text */
-			color: #e762d7ff;
+			color: #e762d7;
 			font-style: normal;
 			font-size: 215%;
 
