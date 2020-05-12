@@ -12,7 +12,7 @@ function retrieveStorage() {
 			var difName = difficulties[i].id.substr(0, difficulties[i].id.indexOf('D'));
 			localStorage.setItem(difName + " Wins", 0); localStorage.setItem(difName + " Losses", 0);
 		}
-		setBackground("Difficulty Backgrounds/Default Background.jpg");
+		setBackground("Difficulty Backgrounds/Default Background (No Saves Found).jpg");
 	}
 }
 
