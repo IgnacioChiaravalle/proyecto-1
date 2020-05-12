@@ -26,6 +26,10 @@
 	font-family: Neucha;
 	src: url(Fonts/Neucha_Font.TTF);
 }
+@font-face {
+	font-family: PlasticExplosive;
+	src: url(Fonts/PlasticExplosive_Font.TTF);
+}
 
 @keyframes expandFromCenter {
 	from { transform: scale(0); }

@@ -69,6 +69,7 @@ h1 {
 
 	#help-text #how-to-play-headline {
 		font-size: 250%;
+		margin-bottom: 2.5%;
 		color: #e1e622;
 		font-family: GloriaHallelujah;
 	}
@@ -98,9 +99,14 @@ h1 {
 			font-style: normal;
 		}
 		#help-text p span.r-and-m {
-			color: #31C2E7;
+			color: #31c2e7;
 			text-shadow: -1px -1px 0 #94e352, 1px -1px 0 #94e352, -1px 1px 0 #94e352, 1px 1px 0 #94e352;
 			font-family: Misfits;
+		}
+		#help-text p span.bomb {
+			color: #e25822 ;
+			font-size: 85%;
+			font-family: PlasticExplosive;
 		}
 
 
