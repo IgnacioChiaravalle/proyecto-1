@@ -1,5 +1,5 @@
 const navbar = document.getElementById("navbar");
-const dDMenu = document.getElementsByClassName("drop-down-menu")[0];
+const dDMenu = document.getElementById("drop-down-menu");
 const popUp = document.getElementById("ending-pop-up");
 const overlay = document.getElementById("overlay");
 
