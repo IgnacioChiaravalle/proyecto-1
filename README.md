@@ -10,3 +10,7 @@ Esta aplicación es un juego de la memoria. En él, el jugador es presentado con
 
 **Temática:**
 Se optó por una temática basada en la popular serie animada *Rick and Morty*. Las imágenes en los frentes y dorsos de las cartas, los diferentes fondos de la pantalla e incluso las varias dificultades del juego responderán a esta temática, mostrando imágenes y referencias de la serie.
+
+**Observación:**
+La versión de GitHub Pages del sitio es lenta para la carga de imágenes y tipografías. Al no ser un sitio independiente, se depende de la velocidad con la que GitHub encuentre los archivos locales del proyecto y éstos sean cargados en el navegador. Esto es especialmente lento cuando la conexión a Internet no es buena. Se sugiere vehementemente descargar el repositorio y ejecutar el archivo "index.html" en forma local.
+Cabe destacar que la versión de GitHub Pages **sí** funciona (y esto se puede comprobar con suficiente paciencia), pero por su lentitud no recomiendo su uso. Además, una vez que una imagen o tipografía ha sido cargada por primera vez, las futuras cargas son prácticamente inmediatas (ya que el navegador la almacena localmente).
