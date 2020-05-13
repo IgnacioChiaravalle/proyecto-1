@@ -47,36 +47,45 @@ function createGrid(sideLength, bombsNum) { //Creates the Grid in HTML Document,
 function defineMatrix(sideLength) { //Creates a Matrix for handling the Grid.
 	for(var i = 0; i < sideLength; i++)
 		matrixOfImageRoutes[i] = new Array(sideLength);
-
 	var imageNames = new Array(imageQuantity); //Array that contains an Integer for every possible hidden image.
-	for (var i = 0; i < 57; i++)
+	fillImageNames(imageNames);
+	fillMatrix(sideLength, imageNames)
+	shuffleMatrix(sideLength);
+}
+	function fillImageNames(imageNames) {
+		for (var i = 0; i < 57; i++)
 		imageNames[i] = i;
-	imageNames.sort(() => Math.random() - 0.5);
-	imageNames = imageNames.slice(0, imagesInPlay); //The array has been randomly shuffled and turned into a subset of itself that contains only the amount of image names needed.
-
-	for (var i = 0; i < bombsCount; i++) { //First cells of matrix are filled with bombs.
-		matrixOfImageRoutes[0][i] = "Hidden Images/Neutrino Bomb.png";
+		imageNames.sort(() => Math.random() - 0.5);
+		imageNames = imageNames.slice(0, imagesInPlay); //The array has been randomly shuffled and turned into a subset of itself that contains only the amount of image names needed.
 	}
-	var pos = 0;
-	for (var i = 0; i < sideLength; i++) { //The rest matrix is filled with two copies of every image selected after slicing the array.
-		for (var j = 0; j < sideLength; j++) {
-			if (i == 0 && j < bombsCount) j = bombsCount - 1;
-			else {
-				matrixOfImageRoutes[i][j] = "Hidden Images/Image " + imageNames[pos] + ".png";
-				if ((i%2==0 && j%2==0) || (i%2==1 && j%2==1)) pos++; //pos is modified on these two conditions because bombsCount and sideLength are odd numbers and that determines when pos should be updated.
+
+	function fillMatrix (sideLength, imageNames) {
+		for (var i = 0; i < bombsCount; i++) { //First cells of matrix are filled with bombs.
+			matrixOfImageRoutes[0][i] = "Hidden Images/Neutrino Bomb.png";
+		}
+		var pos = 0;
+		for (var i = 0; i < sideLength; i++) { //The rest matrix is filled with two copies of every image selected after slicing the array.
+			for (var j = 0; j < sideLength; j++) {
+				if (i == 0 && j < bombsCount) j = bombsCount - 1;
+				else {
+					matrixOfImageRoutes[i][j] = "Hidden Images/Image " + imageNames[pos] + ".png";
+					if ((i%2==0 && j%2==0) || (i%2==1 && j%2==1)) pos++; //pos is modified on these two conditions because bombsCount and sideLength are odd numbers and that determines when pos should be updated.
+				}
 			}
 		}
 	}
-	for (var i = 0; i < sideLength; i++) { //The matrix is randomly shuffled.
-		for (var j = 0; j < sideLength; j++) {
-			var i1 = Math.floor(Math.random() * sideLength);
-			var j1 = Math.floor(Math.random() * sideLength);
-			var temp = matrixOfImageRoutes[i][j];
-			matrixOfImageRoutes[i][j] = matrixOfImageRoutes[i1][j1];
-			matrixOfImageRoutes[i1][j1] = temp;
+	
+	function shuffleMatrix(sideLength) {
+		for (var i = 0; i < sideLength; i++) { //The matrix is randomly shuffled.
+			for (var j = 0; j < sideLength; j++) {
+				var i1 = Math.floor(Math.random() * sideLength);
+				var j1 = Math.floor(Math.random() * sideLength);
+				var temp = matrixOfImageRoutes[i][j];
+				matrixOfImageRoutes[i][j] = matrixOfImageRoutes[i1][j1];
+				matrixOfImageRoutes[i1][j1] = temp;
+			}
 		}
 	}
-}
 
 
 function setOnClicks() {
