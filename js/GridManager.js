@@ -54,15 +54,14 @@ function defineMatrix(sideLength) { //Creates a Matrix for handling the Grid.
 }
 	function fillImageNames(imageNames) {
 		for (var i = 0; i < 57; i++)
-		imageNames[i] = i;
+			imageNames[i] = i;
 		imageNames.sort(() => Math.random() - 0.5);
 		imageNames = imageNames.slice(0, imagesInPlay); //The array has been randomly shuffled and turned into a subset of itself that contains only the amount of image names needed.
 	}
 
 	function fillMatrix (sideLength, imageNames) {
-		for (var i = 0; i < bombsCount; i++) { //First cells of matrix are filled with bombs.
+		for (var i = 0; i < bombsCount; i++) //First cells of matrix are filled with bombs.
 			matrixOfImageRoutes[0][i] = "Hidden Images/Neutrino Bomb.png";
-		}
 		var pos = 0;
 		for (var i = 0; i < sideLength; i++) { //The rest matrix is filled with two copies of every image selected after slicing the array.
 			for (var j = 0; j < sideLength; j++) {
@@ -74,7 +73,7 @@ function defineMatrix(sideLength) { //Creates a Matrix for handling the Grid.
 			}
 		}
 	}
-	
+
 	function shuffleMatrix(sideLength) {
 		for (var i = 0; i < sideLength; i++) { //The matrix is randomly shuffled.
 			for (var j = 0; j < sideLength; j++) {
