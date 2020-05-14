@@ -1,0 +1,72 @@
+nav {
+	/* Size */
+	width: 99.5%;
+	padding: 0.1%;
+	border-radius: 0.5%/15%;
+
+	/* Text */
+	font-family: Misfits;
+	background: rgba(55, 73, 131, 0.925);
+}
+	
+	.navbar-gamename {
+		/* Display */
+		vertical-align: middle;
+
+		/* Size */
+		width: width: 13%;
+		margin-top: 0.1%;
+		margin-left: 0.1%;
+		padding: 0.4%;
+
+		/* Text */
+		color: rgba(250, 228, 139, 1);
+		text-align: left;
+		font-style: bold;
+		font-size: 300%;
+
+		/* Cursor */
+		cursor: default;
+	}
+
+	.navbar-options {
+		/* Display */
+		display: inline-block;
+		float: right;
+		vertical-align: middle;
+		
+		/* Size */
+		width: 30%;
+		padding: 0.5%;
+	}
+		.navbar-link {
+			/* Size */
+			width: 30%;
+			margin-left: 1%;
+			padding: 5%;
+
+			/* Text */
+			color: rgba(166, 238, 230, 1);
+			text-align: center;
+			font-style: italic;
+			font-size: 200%;
+			text-decoration: none;
+		}
+		.navbar-link:hover {
+			/* Text */
+			color: rgba(251, 100, 103, 1);
+			font-style: normal;
+
+			/* Cursor */
+			cursor: pointer;
+		}
+
+		#activeNavBar {
+			/* Text */
+			color: rgba(231, 98, 215, 1);
+			font-style: normal;
+			font-size: 215%;
+
+			/* Cursor */
+			cursor: default;
+		}

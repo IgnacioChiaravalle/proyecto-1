@@ -1,0 +1,25 @@
+table {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+	border-collapse: separate;
+}
+
+table td {
+	border-radius: 5%/10%;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+td.covered-cell {
+	background-image: url("Cards/Card Backside.png")!important;
+	opacity: 0.875;
+}
+td.covered-cell:hover {
+	background-image: url("Cards/Hover Highlight.png")!important;
+	opacity: 1;
+	cursor: pointer;
+}
+
+td.uncovered-cell {
+	opacity: 1;
+}

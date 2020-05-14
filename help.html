@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ayuda - Rick and Morty's Matcher</title>
+		<link rel = "stylesheet" type = "text/css" href = "css/Document Style.css"/>
+		<link rel = "stylesheet" type = "text/css" href = "css/NavBar Style.css"/>
+		<link rel = "stylesheet" type = "text/css" href = "css/Help Style.css"/>
+		<link rel="shortcut icon" href="favicon-for-site.ico" />
+	</head>
+
+	<body>
+
+
+		<div id = "help-contents">
+
+			<div id = "help-div-for-title-and-navbar">
+
+				<nav>
+					<div>
+						<a class = "navbar-gamename">Rick and Morty's Matcher</a>
+						<div class = "navbar-options">
+							<a class="navbar-link" href = "index.html">Juego</a> <!-- Takes player to Main screen (Game screen). -->
+							<a class="navbar-link" id = "activeNavBar">Ayuda</a> <!-- Current screen -->
+							<a class="navbar-link" href = "contact.html">Contacto</a> <!-- Takes player to Contact screen. -->
+						</div>
+					</div>
+				</nav>
+
+				<div id = "help-title">AYUDA E INSTRUCCIONES</div>
+
+
+			</div>
+
+			<div id = "help-text">
+				<h1 id = "site-headline">¿Qué es <span>Rick and Morty's Matcher</span>?</h1>
+				<p class = "indented">¡¡Holaaaaa!! ¿Cómo estás? Parece que todavía hay gente en este mundo que lee las instrucciones, ¿no? Debo reconocer que estoy genuinamente sorprendido :D</p>
+				<p class = "indented">Seamos sinceros: si llegaste hasta acá es por una de dos cosas:</p>
+				<ul>
+					<li><p>O bien sos una de esas personas que quieren saberlo todo de todo; uno de ésos a los que les gusta conocer cada detalle de las cosas que usan... Casi un <i>Rick</i>, podría decirse...</p></li>
+					<li><p>O bien sos el típico <i>Jerry</i>, y necesitás que te sostengan la mano en cada paso. Te voy a dejar decidir a vos cuál es la opción correcta ;)</p></li>
+				</ul>
+				<p class = "indented">De cualquier modo, no viniste a esta página para averiguar eso: ¡para eso está la página del juego! Y sucede que <span class = "r-and-m">Rick and Morty's Matcher</span> es justamente eso: un juego; o, más específicamente, un juego de la memoria.</p>
+				<p class = "indented">Todos conocemos (y amamos) al juego de la memoria, y si mirás en algún armario o cajón de tu casa lo más probable es que encuentres una caja con una copia de él. Sin embargo, esta versión tiene tres detalles agregados que la distinguen (espero que positivamente :D) del resto. El primero de estos detalles es el más obvio, y si todavía no lo notaste es porque definitivamente sos un <i>Jerry</i>: ¡la temática del sitio entero es de <span class = "r-and-m">Rick and Morty</span>! Las otras dos particularidades voy a dejar que las averigües al leer la próxima sección ;)</p>
+				<p class = "indented">Si querés más información sobre el desarrollo de este sitio, podés consultar la página de <a href="contact.html">CONTACTO</a>. ¡Espero que la pases bien y que tengas un buen día!</p>
+
+				<h1 id = "how-to-play-headline">¿Cómo se Juega?</h1>
+				<p class = "indented">Suficientes chistes malos. Vayamos a lo importante.</p>
+				<p class = "indented">El objetivo del juego es simple: encontrá todas las parejas de imágenes ocultas en la grilla de juego sin explotar en el intento. Razonable, ¿no? Veamos cómo se hace...</p>
+				<p class = "indented">Lo primero que vas a tener que hacer es seleccionar una dificultad con el botón correspondiente de la pantalla de <a href="index.html">JUEGO</a>. Cada opción de dificultad muestra entre paréntesis el tamaño de la grilla de juego, expresado en la cantidad de cartas por lado que tiene. Cuando elijas la dificultad de tu partida se va a generar una grilla de cartas mezcladas al azar, y todas ellas van a estar boca abajo. Para revelar una carta sólo tenés que hacer click sobre ella. Ahora viene lo divertido... ;)</p>
+				<p class = "indented">Sólo podés revelar de a dos imágenes por vez. Es decir, cuando hayas hecho click sobre dos imágenes y las hayas revelado, el próximo click va a hacer que se vuelvan a ocultar. Sin embargo, si las dos imágenes coincidían, ¡EUREKA! ¡Estás haciendo progreso! Las imágenes van a desaparecer del tablero, y vas a estar más cerca de tu victoria :D</p>
+				<p class = "indented">Te había dejado con dos detalles pendientes, ¿verdad? Bueno, el primero se puede inferir de lo que te acabo de comentar: esta aplicación está pensada para un solo jugador (¡lo que no te impide sentarte junto a un amigo y ver quién es el mejor!). Esto quiere decir que no va a haber un rival al que vencer, pero eso no quita que puedas ser derrotado de todas formas; de eso se encarga el segundo detalle. Dejame que te lo explique...</p>
+				<p class = "indented">No todas las cartas ocultan imágenes inocentes: algunas tienen <span class = "bomb">bombas de neutrinos</span>. Estas bombas son objetos de destrucción masiva y no, no queremos ver qué tan bien funcionan. Cuando hagas click sobre una carta y se revele una bomba en su lugar, ¡TENÉ CUIDADO! Volver a apretar esa carta más adelante en el juego implica la detonación de la bomba, la destrucción del sistema solar entero y, obviamente, una derrota inmediata en la partida... Trágico, lo sé...</p>
+				<p class = "indented">Por supuesto, a mayor dificultad, mayor cantidad de bombas en el tablero. No pensaste que iba a ser fácil, ¿o sí? Bueno, en fin, buena suerte y no destruyas nuestro mundo :)</p>
+				
+				<h1 id = "notice-headline">Aviso</h1>
+				<p  class = "indented">Este sitio almacena en forma local a tu navegador la última dificultad elegida y las cantidad de partidas que ganaste y perdiste en cada dificultad. Estos datos no pueden ser accedidos de ninguna forma por nadie que no tenga acceso a tu computadora, y no se envían a ningún servidor. Para más información sobre el almacenamiento local usado, te invito a consultar <a href="https://www.w3schools.com/html/html5_webstorage.asp" target="_blank">www.w3schools.com/html/html5_webstorage.asp</a>. ¡Muchas gracias, y que disfrutes el juego!</p>
+			</div>
+
+		</div>
+
+
+	</body>
+</html>

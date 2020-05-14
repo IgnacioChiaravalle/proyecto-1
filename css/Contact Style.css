@@ -1,0 +1,114 @@
+body {
+	background-image: url("Backgrounds/Contact Background.png");
+}
+
+#contact-contents {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+#contact-title {
+	/* Display */
+	position: fixed;
+	margin-top: 15%;
+
+	/* Animation */
+	transition: 2000ms ease-in-out;
+	transform: rotate(-48deg);
+
+	/* Text */
+	color: rgba(46, 177, 211, 1);
+	text-shadow: -4px -4px 3px rgba(148, 227, 82, 1), 4px -4px 3px rgba(148, 227, 82, 1), -4px 4px 3px rgba(148, 227, 82, 1), 4px 4px 3px rgba(148, 227, 82, 1);
+	font-size: 800%;
+	font-family: Misfits;
+}
+
+#contact-info {
+	/* Display */
+	margin-top: 2%;
+	margin-right: 3%;
+	float: right;
+
+	/* Size */
+	width: 60%;
+	padding: 2.5%;
+	border: 5px outset rgba(231, 98, 215, 1);
+	border-radius: 7%/15%;
+
+	/* Animation */
+	animation: expandFromCenter 2000ms;
+
+	/* Background */
+	background-color: rgba(166, 238, 230, 0.85);
+}
+	
+	#author {
+		display: flex;
+		justify-content: space-between;
+		padding: 3%;
+		font-size: 300%;
+	}
+		#author #author-declare {
+			color: rgba(232, 146, 66, 1);
+			text-shadow: -2px -2px 2px rgba(0, 0, 0, 1), 2px -2px 2px rgba(0, 0, 0, 1), -2px 2px 2px rgba(0, 0, 0, 1), 2px 2px 2px rgba(0, 0, 0, 1);
+			font-weight: bold;
+			font-family: CaveatBrush;
+		}
+		#author #author-name {
+			color: rgba(250, 228, 139, 1);
+			text-shadow: -1px -1px 2px rgba(0, 0, 0, 1), 1px -1px 2px rgba(0, 0, 0, 1), -1px 1px 2px rgba(0, 0, 0, 1), 1px 1px 2px rgba(0, 0, 0, 1);
+			font-family: ShadowsIntoLight;
+		}
+
+	#email {
+		display: flex;
+		justify-content: space-between;
+		padding: 1%;
+	}
+		#email #email-declare {
+			color: rgba(145, 124, 93, 1);
+			text-shadow: -1px -1px 1px rgba(0, 0, 0, 1), 1px -1px 1px rgba(0, 0, 0, 1), -1px 1px 1px rgba(0, 0, 0, 1), 1px 1px 1px rgba(0, 0, 0, 1);
+			font-size: 185%;
+			font-weight: bold;
+			font-family: GloriaHallelujah;
+		}
+		#email #email-adresses {
+			display: block;
+			padding: 0%;
+			font-family: NanumPenScript;
+		}
+			#email #email-adresses a {
+				color: rgba(130, 102, 196, 1);
+				text-shadow: -1px -1px 1px rgba(0, 0, 0, 1), 1px -1px 1px rgba(0, 0, 0, 1), -1px 1px 1px rgba(0, 0, 0, 1), 1px 1px 1px rgba(0, 0, 0, 1);
+				font-size: 225%;
+				font-style: italic;
+				text-decoration: none;
+			}
+			#email #email-adresses a:hover {
+				font-weight: bold;
+				font-style: normal;
+			}
+
+	#project-regarded {
+		font-size: 130%;
+		font-family: PatrickHandSC;
+	}
+		#project-regarded-title {
+			color: rgba(230, 48, 52, 1);
+			text-shadow: -1px -1px 1px rgba(163, 163, 163, 1), 1px -1px 1px rgba(163, 163, 163, 1), -1px 1px 1px rgba(163, 163, 163, 1), 1px 1px 1px rgba(163, 163, 163, 1);
+			font-size: 160%;
+			font-weight: bold;
+			font-family: Neucha;
+			line-height: 1%;
+		}
+
+		#project-regarded a {
+			color: rgba(122, 97, 182, 1);
+			font-style: italic;
+			text-decoration: none;
+		}
+		#project-regarded a:hover {
+			font-weight: bold;
+			font-style: normal;
+		}

@@ -1,0 +1,117 @@
+body {
+	background-image: url("Backgrounds/Help Background.jpg");
+}
+
+h1 {
+	line-height: 25%;
+	margin-top: 3.5%;
+}
+
+#help-contents {
+	display: block;
+	width: 100%;
+	height: 100%;
+	align-content: center;
+}
+
+#help-div-for-title-and-navbar {
+	/* Display */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin-bottom: 5%;
+	z-index: 5;
+	border-bottom: 2px solid black;
+
+	/* Background */
+	background-image: url("Backgrounds/Help Title Background.jpg");	
+}
+	#help-div-for-title-and-navbar #help-title {
+		/* Display */
+		width: 100%;
+
+		/* Animation */
+		animation: expandFromCenter 2100ms;
+
+		/* Text */
+		color: rgba(46, 177, 211, 1);
+		text-align: center;
+		text-shadow: -4px -4px 3px rgba(148, 227, 82, 1), 4px -4px 3px rgba(148, 227, 82, 1), -4px 4px 3px rgba(148, 227, 82, 1), 4px 4px 3px rgba(148, 227, 82, 1);
+		font-size: 800%;
+		font-family: Misfits;
+	}
+
+#help-text {
+	margin-top: 9%;
+	margin-left: auto;
+	margin-right: auto;
+	float: center;
+
+	/* Size */
+	width: 98%;
+	padding: 2.5% 0%;
+
+	/* Text */
+	color: white;
+}
+	#help-text #site-headline {
+		font-size: 250%;
+		color: rgba(232, 146, 66, 1);
+		font-family: CaveatBrush;
+	}
+		#help-text #site-headline span {
+			color: rgba(46, 177, 211, 1);
+			font-size: 120%;
+			text-shadow: -2px -2px 1px rgba(148, 227, 82, 1), 2px -2px 1px rgba(148, 227, 82, 1), -2px 2px 1px rgba(148, 227, 82, 1), 2px 2px 1px rgba(148, 227, 82, 1);
+			font-family: Misfits;
+		}
+
+	#help-text #how-to-play-headline {
+		font-size: 250%;
+		margin-bottom: 2.5%;
+		color: rgba(225, 230, 34, 1);
+		font-family: GloriaHallelujah;
+	}
+
+	#help-text #notice-headline {
+		font-size: 250%;
+		color: rgba(235, 19, 23, 1);
+		font-family: Neucha;
+	}
+
+	#help-text p {
+		text-shadow: -1px -1px 3px rgba(0, 0, 0, 1), 1px -1px 3px rgba(0, 0, 0, 1), -1px 1px 3px rgba(0, 0, 0, 1), 1px 1px 3px rgba(0, 0, 0, 1);
+		font-size: 130%;
+		font-family: PatrickHandSC;
+		margin: 0;
+	}
+		#help-text p.indented {
+			text-indent: 2%;
+		}
+		#help-text p a {
+			color: rgba(124, 237, 30, 1);
+			font-style: italic;
+			text-decoration: none;
+		}
+		#help-text p a:hover {
+			font-weight: bold;
+			font-style: normal;
+		}
+		#help-text p span.r-and-m {
+			color: rgba(49, 194, 231, 1);
+			text-shadow: -1px -1px 0 rgba(148, 227, 82, 1), 1px -1px 0 rgba(148, 227, 82, 1), -1px 1px 0 rgba(148, 227, 82, 1), 1px 1px 0 rgba(148, 227, 82, 1);
+			font-family: Misfits;
+		}
+		#help-text p span.bomb {
+			color: rgba(226, 88, 34, 1);
+			font-size: 85%;
+			font-family: PlasticExplosive;
+		}
+
+
+	#help-text ul {
+		margin-top: 0;
+		margin-left: 1%;
+		margin-bottom: 1%;
+	}
